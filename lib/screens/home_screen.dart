@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ]
   };
   int _selectedIndex = 0;
-  List _selectedItems = boxes.values.elementAt(0);
+  List _selectedItems = [];
 
   @override
   void initState() {
@@ -42,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _selectedItems = boxes.values.elementAt(0);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
